@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="30dp"
+    tools:context=".OrderSummary">
+
+    <RelativeLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/backButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Order Summary"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/topSection">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/receiptHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/moviePosterPlaceholder"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/moviePosterPlaceholder">
+                        <TextView
+                            android:id="@+id/titlePlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textSize="24sp"
+                            android:textColor="@color/gold"
+                            android:text="Placeholder Title"/>
+
+                        <TextView
+                            android:id="@+id/cinemaPlaceholder"
+                            android:layout_width="match_parent"
+                            android:layout_below="@id/titlePlaceholder"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:text="Placeholder Cinema"/>
+
+                        <TextView
+                            android:id="@+id/datePlaceholder"
+                            android:layout_width="wrap_content"
+                            android:layout_below="@id/cinemaPlaceholder"
+                            android:layout_alignParentStart="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textSize="15sp"
+                            android:text="Date Placeholder"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/receiptDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/receiptHeader"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/orderNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="14sp"
+                        android:text="Order Number"/>
+
+                    <TextView
+                        android:id="@+id/orderNumberContext"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderNumber"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="32564896523685"/>
+
+                    <TextView
+                        android:id="@+id/orderSeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderNumberContext"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:layout_marginTop="20dp"
+                        android:textSize="14sp"
+                        android:text="Seat"/>
+
+                    <TextView
+                        android:id="@+id/orderSeatType"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderSeat"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="Seat Placeholder"/>
+
+                    <TextView
+                        android:id="@+id/orderPaymentMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderSeatType"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Payment Method"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/orderPaymentType"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderPaymentMethod"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="Payment Placeholder"/>
+
+                    <TextView
+                        android:id="@+id/orderPaymentSeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderPaymentType"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:layout_marginTop="20dp"
+                        android:textSize="14sp"
+                        android:text="Seat Type Placeholder"/>
+
+                    <TextView
+                        android:id="@+id/orderPaymentSeatAmount"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderPaymentSeat"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="Pricetag Placeholder"/>
+
+                    <TextView
+                        android:id="@+id/orderConvenienceFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/orderPaymentSeatAmount"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:layout_marginTop="20dp"
+                        android:textSize="14sp"
+                        android:text="Convenience Fee"/>
+
+                    <TextView
+                        android:id="@+id/orderConvenienceFeeAmount"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderConvenienceFee"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:text="Rp0"/>
+
+                    <ImageView
+                        android:id="@+id/line1"
+                        android:layout_below="@id/orderConvenienceFeeAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="30dp"
+                        android:src="@drawable/line"/>
+
+                    <TextView
+                        android:id="@+id/orderTotalFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/line1"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="14sp"
+                        android:text="Actual Pay"/>
+
+                    <TextView
+                        android:id="@+id/orderTotalFeeAmount"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/orderTotalFee"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="26sp"
+                        android:textColor="@color/black"
+                        android:text="Pricetag Placeholder"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

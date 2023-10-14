@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">UTS_MovieTicket</string>
+    <string name="loginText">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="lupa_password">Forgot Password</string>
+    <string name="login_btn_txt">LOGIN</string>
+    <string name="have_account_qmark">Don\'t have an account?</string>
+    <string name="signup_here">Sign-up here!</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="synopsisMovie1">Amid a future war between the human race and the forces of artificial intelligence, Joshua, a hardened ex-special forces agent grieving the disappearance of his wife, is recruited to hunt down and kill the Creator, the elusive architect of advanced AI who has developed a mysterious weapon with the power to end the war-and mankind itself.  </string>
+    <string name="opSynopsis">A dramatization of the life story of J. Robert Oppenheimer, the physicist who had a large hand in the development of the atomic bomb, thus helping end World War 2. We see his life from university days all the way to post-WW2, where his fame saw him embroiled in political machinations.</string>
+    <string name="tgSynopsis">Set 30 years after its predecessor, it follows Maverick\'s return to the United States Navy Strike Fighter Tactics Instructor program (also known as U.S. Navy-Fighter Weapons School - \'TOPGUN\'), where he must confront his past as he trains a group of younger pilots, among them the son of Maverick\'s deceased best friend Lieutenant Nick \'Goose\' Bradshaw, USN.</string>
+
+
+    <array name="bioskop">
+        <item>Ambarukmo Plaza XXI, Studio 1</item>
+        <item>Ambarukmo Plaza XXI, Studio 2</item>
+        <item>Ambarukmo Plaza XXI, Studio 3</item>
+        <item>Ambarukmo Plaza Premiere</item>
+        <item>Empire XXI, Studio 1</item>
+        <item>Empire XXI, Studio 2</item>
+        <item>Empire XXI, Studio 3</item>
+        <item>Lippo Plaza Cinepolis, Studio 1</item>
+        <item>Lippo Plaza Cinepolis, Studio 2</item>
+        <item>Lippo Plaza Cinepolis, Studio 3</item>
+        <item>Pakuwon Mall CGV, Studio 1</item>
+        <item>Pakuwon Mall CGV, Studio 2</item>
+        <item>Pakuwon Mall CGV, Studio 3</item>
+    </array>
+
+    <array name="seat">
+        <item>Regular Seat</item>
+        <item>Premium Seat</item>
+        <item>VIP Seat</item>
+    </array>
+
+    <array name="transaksi">
+        <item>Bank</item>
+        <item>DANA</item>
+        <item>OVO</item>
+    </array>
+
+    <array name="bank">
+        <item>BNI</item>
+        <item>BRI</item>
+        <item>Mandiri</item>
+    </array>
+
+</resources>

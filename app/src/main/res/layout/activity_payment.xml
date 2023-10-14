@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="30dp"
+    tools:context=".Payment">
+
+    <RelativeLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/topSection"
+        android:layout_above="@+id/order"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/pilihBioskop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilih Bioskop"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdBioskop"
+                android:layout_below="@id/pilihBioskop"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/gold"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Spinner
+                        android:id="@+id/spinnerBioskop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginTop="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/pilihSeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cdBioskop"
+                android:layout_marginTop="10dp"
+                android:text="Pilih Jenis Seat"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdSeat"
+                android:layout_below="@id/pilihSeat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/gold"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Spinner
+                        android:id="@+id/spinnerSeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginTop="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/pilihTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cdSeat"
+                android:layout_marginTop="10dp"
+                android:text="Pilih Tanggal"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdTanggal"
+                android:layout_below="@id/pilihTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/gold"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <DatePicker
+                        android:id="@+id/datePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:calendarViewShown="false"
+                        android:datePickerMode="spinner"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/seatPaySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cdTanggal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/seatType"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Regular Seat"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/fee"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seatType"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Convenience Fee"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/seatPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Rp35.000"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/totalFee"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/seatPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Rp0"
+                    android:textSize="18sp"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_below="@id/seatPaySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/line"/>
+
+            <RelativeLayout
+                android:id="@+id/totalPaySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/actualPay"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Actual Pay"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/actualPrice"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Rp35.000"
+                    android:textSize="20sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/paymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalPaySection"
+                android:layout_marginTop="20dp"
+                android:text="Pilih Metode Pembayaran"
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat_semibold"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cdPaymentMethod"
+                android:layout_below="@id/paymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="15dp"
+                android:backgroundTint="@color/gold"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Spinner
+                        android:id="@+id/spinnerPaymentMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:layout_marginTop="10dp"/>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/bankSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="fill_vertical"
+                android:layout_below="@id/cdPaymentMethod">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="4"
+                    android:backgroundTint="@color/gold"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <Spinner
+                            android:id="@+id/spinnerBankSelect"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginTop="10dp"/>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <EditText
+                    android:id="@+id/accNum"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textAlignment="center"
+                    android:background="@drawable/edit_text"
+                    android:hint="Account Number"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_shape"
+        android:text="Order"/>
+
+</RelativeLayout>
